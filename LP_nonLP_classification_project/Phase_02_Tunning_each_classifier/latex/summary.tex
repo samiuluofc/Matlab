@@ -1,0 +1,92 @@
+\documentclass[a4paper,12pt]{article} %make sure that we are using 12 pt font
+\usepackage{fancyhdr}
+\usepackage[margin=2.5cm]{geometry}%rounded up from 1.87, just to be safe...
+\usepackage{parskip}
+%%\usepackage{times} %make sure that the times new roman is used
+\usepackage{sectsty}
+%%\raggedright
+
+
+
+\begin{document}
+
+
+\pagestyle{fancy}
+%This puts your name at the top right, outside the margin
+\lhead{CPSC 607: Biological Computation (Winter 2016)\\Project Documentation}
+\rhead{Samiul Azam\\30 Apr. 2016}
+ \renewcommand{\headrulewidth}{1pt}
+\sectionfont{\fontsize{12}{15}\selectfont}
+\vspace{2cm}
+
+
+\section*{\\Phase 02: Tuning Each Classifier}
+............................................................................................................................................
+
+In the command window of Matlab, type ``help $<$\verb|file_name.m|$>$'' to see the header documentation of my program scripts.\\
+............................................................................................................................................
+
+\textbf{Note 1:}\\\\
+This folder contains following main script. Go to Matlab Command Window and type the target main script (For example $>>$  \verb|tune_classifier|) for execution.
+\begin{itemize}
+	\item \verb|tune_classifier.m|   
+		\begin{itemize}
+		\item Read the main script header for more details.
+		\item This program will tune (maximize the accuracy) each classifier iteratively by changing one of their sensitive parameter.
+		
+		\item It generates following four ``txt'' files and four ``bmp'' files (in the current directory) that contain graphs and information about the peak point of a graph.	
+				\begin{itemize}
+					\item \verb|disa_tune.bmp|
+					\item \verb|svm_tune.bmp|
+					\item \verb|knn_tune.bmp|
+					\item \verb|tree_tune.bmp|
+					\item \verb|disa_output.txt|
+					\item \verb|svm_output.txt|
+					\item \verb|knn_output.txt|
+					\item \verb|tree_output.txt|	\\\\			
+				\end{itemize}
+		\end{itemize}
+\end{itemize}
+
+............................................................................................................................................\\\\
+\textbf{Note 2: }\\
+This folder contains following function scripts (You don't need to run them separately).
+\begin{itemize}
+	
+	\item \verb|disa_tune.m|
+	\begin{itemize}
+		\item Read the function header for more details.
+		\item This function is used inside \verb|tune_classifier.m|.
+	\end{itemize}
+	\item \verb|tree_tune.m|
+	\begin{itemize}
+		\item Read the function header for more details.
+		\item This function is used inside \verb|tune_classifier.m|.
+	\end{itemize}
+	\item \verb|knn_tune.m|
+	\begin{itemize}
+		\item Read the function header for more details.
+		\item This function is used inside \verb|tune_classifier.m|.
+	\end{itemize}
+	\item \verb|svm_tune.m|
+	\begin{itemize}
+		\item Read the function header for more details.
+		\item This function is used inside \verb|tune_classifier.m|.
+	\end{itemize}
+	\item \verb|my_svmclassify.m|
+	\begin{itemize}
+		\item Not my major contribution. I slightly modify the built-in matlab function to generate probability instead of `0' or `1' labels. 
+		\item This function is used inside \verb|tune_classifier.m|.
+	\end{itemize}
+	\item \verb|my_svmdecision.m|
+	\begin{itemize}
+		\item Not my major contribution. I slightly modify the built-in matlab function to generate probability instead of `0' or `1' labels. 
+		\item This function is used inside \verb|my_svmclassify.m|.
+	\end{itemize}
+	
+\end{itemize}
+............................................................................................................................................\\
+In the command window of Matlab, type ``help $<$\verb|file_name.m|$>$'' to see the header documentation of my program scripts.\\
+............................................................................................................................................
+
+\end{document}

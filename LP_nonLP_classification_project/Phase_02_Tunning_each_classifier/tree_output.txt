@@ -1,0 +1,7 @@
+Decision Tree: >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+Maximum avearge accuracy (in Percentage)    : 71.54
+LP detection accuracy (in Percentage)       : 54.44
+Non-LP detection accuracy (in Percentage)   : 88.63
+Value of MinLeaf at Max. accuracy : 5.00
+Overall testing time : 1.284931 seconds

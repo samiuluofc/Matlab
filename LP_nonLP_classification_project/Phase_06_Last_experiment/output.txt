@@ -1,0 +1,5 @@
+Mixture of experts model: >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+Accuracy for 1x resolution of CLPs : 89.81 %
+Accuracy for hx resolution of CLPs : 86.17 %
+Accuracy for 2x resolution of CLPs : 83.50 %

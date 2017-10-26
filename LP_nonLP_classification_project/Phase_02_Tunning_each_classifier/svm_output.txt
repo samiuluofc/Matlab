@@ -1,0 +1,7 @@
+Support Vector Machine: >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+Maximum avearge accuracy (in Percentage)    : 77.57
+LP detection accuracy (in Percentage)       : 57.78
+Non-LP detection accuracy (in Percentage)   : 97.36
+Value of Sigma at Max. accuracy : 5.60
+Overall testing time : 19.328864 seconds

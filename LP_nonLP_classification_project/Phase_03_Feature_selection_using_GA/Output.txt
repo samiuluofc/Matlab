@@ -1,0 +1,20 @@
+Discriminant Analysis: >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+Best Fitness value (Error in Percentage): 24.87
+Number of features selected (out of 360): 155
+
+K Nearest Neighbor: >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+Best Fitness value (Error in Percentage): 18.19
+Number of features selected (out of 360): 178
+
+Decision Tree: >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+Best Fitness value (Error in Percentage): 24.77
+Number of features selected (out of 360): 169
+
+Support Vector Machine: >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+Best Fitness value (Error in Percentage): 20.40
+Number of features selected (out of 360): 166
+

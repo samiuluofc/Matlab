@@ -1,0 +1,81 @@
+\documentclass[a4paper,12pt]{article} %make sure that we are using 12 pt font
+\usepackage{fancyhdr}
+\usepackage[margin=2.5cm]{geometry}%rounded up from 1.87, just to be safe...
+\usepackage{parskip}
+%%\usepackage{times} %make sure that the times new roman is used
+\usepackage{sectsty}
+%%\raggedright
+
+
+
+\begin{document}
+
+
+\pagestyle{fancy}
+%This puts your name at the top right, outside the margin
+\lhead{CPSC 607: Biological Computation (Winter 2016)\\Project Documentation}
+\rhead{Samiul Azam\\30 Apr. 2016}
+ \renewcommand{\headrulewidth}{1pt}
+\sectionfont{\fontsize{12}{15}\selectfont}
+\vspace{2cm}
+
+
+\section*{\\Phase 01: Database and Feature Generation}
+............................................................................................................................................
+
+In the command window of Matlab, type ``help $<$\verb|file_name.m|$>$'' to see the header documentation of my program scripts.\\
+............................................................................................................................................
+
+\textbf{Note 1:}\\\\
+This folder have a sub-folder ``CLP\_Database'' that contains all the Candidate License Plates (License Plate (LP) + non-License Plate (non-LP) images). The CLP database is created using the license plate detection algorithm (ALPD) and the database of 565 vehicle images from the article~\cite{Aza16}. I didn't add the vehicle image database and the implementation of ALPD algorithm from the article~\cite{Aza16} (because it is not directly relate to this project and contains ten more files).  
+
+
+............................................................................................................................................\\
+\textbf{Note 2: }\\\\
+This folder contains following main scripts. Go to Matlab Command Window and type the target main script (For example $>>$  \verb|CLP_info|) for execution.
+\begin{itemize}
+	\item \verb|CLP_info.m|   
+		\begin{itemize}
+		\item Read the main script header for more details.
+		\item This program will provide you some statistical information about the (Candidate License Plate) CLP database.
+		\item It generates a ``txt'' file named \verb|CLP_info_output.txt| (in the current directory) that contains the outputs.	
+		\end{itemize}
+	\item \verb|feature_gen.m|
+		\begin{itemize}
+			\item Read the main script header for more details.
+			\item This program extracts HOG features from all the images in the CLP\_Database.  
+			\item It generates following 6 ``mat'' files that contain the HOG features for three different resolutions (original, double and half) of LPs and Non-LPs.
+				\begin{itemize}
+					\item \verb|LP_1x.mat|
+					\item \verb|LP_2x.mat|
+					\item \verb|LP_hx.mat|
+					\item \verb|nonLP_1x.mat|
+					\item \verb|nonLP_2x.mat|
+					\item \verb|nonLP_hx.mat|						
+				\end{itemize}
+		\end{itemize}
+\end{itemize}
+
+............................................................................................................................................\\
+
+............................................................................................................................................\\
+\textbf{Note 3: }\\
+This folder contains following function script (You don't need to run it separately).
+\begin{itemize}
+	\item \verb|my_hog.m|
+		\begin{itemize}
+			\item Read the function header for more details.
+			\item This function is used inside \verb|feature_gen.m|.
+		\end{itemize}
+\end{itemize}
+............................................................................................................................................\\
+In the command window of Matlab, type ``help $<$\verb|file_name.m|$>$'' to see the header documentation of my program scripts.\\
+............................................................................................................................................
+\begin{thebibliography}{99}
+	
+	\bibitem{Aza16} Azam, S., Islam, M. M., ``Automatic license plate detection in hazardous condition,'' Journal of Visual Communication and Image Representation, Elsevier, vol. 36, pp. 172-186, 2016.
+
+	
+\end{thebibliography}
+
+\end{document}

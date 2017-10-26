@@ -1,0 +1,104 @@
+\documentclass[a4paper,12pt]{article} %make sure that we are using 12 pt font
+\usepackage{fancyhdr}
+\usepackage[margin=2.5cm]{geometry}%rounded up from 1.87, just to be safe...
+\usepackage{parskip}
+%%\usepackage{times} %make sure that the times new roman is used
+\usepackage{sectsty}
+%%\raggedright
+
+
+
+\begin{document}
+
+
+\pagestyle{fancy}
+%This puts your name at the top right, outside the margin
+\lhead{CPSC 607: Biological Computation (Winter 2016)\\Project Documentation}
+\rhead{Samiul Azam\\30 Apr. 2016}
+ \renewcommand{\headrulewidth}{1pt}
+\sectionfont{\fontsize{12}{15}\selectfont}
+\vspace{2cm}
+
+
+\section*{\\Phase 05: Mixture of Experts Model}
+............................................................................................................................................
+
+In the command window of Matlab, type ``help $<$\verb|file_name.m|$>$'' to see the header documentation of my program scripts.\\
+............................................................................................................................................
+
+\textbf{Note 1:}\\\\
+This folder contains following main script. Go to Matlab Command Window and type the target main script (For example $>>$  \verb|main_GA|) for execution.
+\begin{itemize}
+	\item \verb|main_W.m|   
+		\begin{itemize}
+		\item Read the main script header for more details.
+		\item This program will give you the accuracies for different preassigned values of weights (before applying Genetic Algorithm (GA) or Particle Swarm Optimization (PSO)).
+		
+		\item It generates a ``txt'' file named \verb|W_output.txt| (in the current directory) that contains the output.	
+			
+		\end{itemize}
+	\item \verb|main_GA.m|  
+		\begin{itemize}
+			\item Read the main script header for more details.
+			\item This program will search for optimal weight vector using GA Algorithm. It will call GA function for five times (default value of N = 5).  
+			
+			\item It generates a ``txt'' file named \verb|GA_output.txt| (in the current directory) that contains the outputs (weight vector and accuracy) for all GA calls. Moreover it also generates generation graphs \\\verb|<i>_ensemble_GA.bmp (where i = 1,2,3,....,N)| for all GA calls.	
+		\end{itemize}
+		
+	\item \verb|main_PSO.m|
+	\begin{itemize}
+		\item Read the main script header for more details.
+		\item This program will search for optimal weight vector using PSO algorithm. It will call PSO function for five times (default value of N = 5).  
+			
+		\item It generates a ``txt'' file named \verb|PSO_output.txt| (in the current directory) that contains the outputs (weight vector and accuracy) for all PSO calls. Moreover it also generates iteration graphs \\\verb|<i>_ensemble_PSO.bmp (where i = 1,2,3,....,N)| for all PSO calls.	
+	\end{itemize}
+		
+\end{itemize}
+
+............................................................................................................................................
+\newpage
+............................................................................................................................................
+\textbf{Note 2: }\\\\
+This folder contains following function scripts (You don't need to run them separately).
+\begin{itemize}
+	
+	\item \verb|my_particle_swarm.m|
+	\begin{itemize}
+		\item Read the function header for more details.
+		\item This function is used inside \verb|main_PSO.m|.
+	\end{itemize}
+	\item \verb|combine_fitness.m|
+	\begin{itemize}
+		\item Read the function header for more details.
+		\item This function is the fitness function (consider 2-fold cross validation, as well as both hx (half zise) and 2x (double size) resolutions of original CLPs) used inside the \verb|my_particle_swarm.m| and the built-in Matlab GA functions.
+
+	\end{itemize}
+	\item \verb|my_ensemble_fitness.m|
+	\begin{itemize}
+		\item Read the function header for more details.
+		\item This function is used inside \verb|combine_fitness.m|.
+	\end{itemize}
+	\item \verb|my_svmclassify.m|
+	\begin{itemize}
+		\item Not my major contribution. I slightly modify the built-in matlab function to generate probability instead of `0' or `1' labels. 
+		\item This function is used inside \verb|my_ensemble_fitness.m|.
+	\end{itemize}
+	\item \verb|my_svmdecision.m|
+	\begin{itemize}
+		\item Not my major contribution. I slightly modify the built-in matlab function to generate probability instead of `0' or `1' labels. 
+		\item This function is used inside \verb|my_svmclassify.m|.
+	\end{itemize}
+	
+\end{itemize}
+............................................................................................................................................
+\textbf{Note 3: }\\\\
+The folder ``Experiment\_data" contains some pre-generated graph images and text-files.
+
+............................................................................................................................................\\\\
+
+............................................................................................................................................\\
+In the command window of Matlab, type ``help $<$\verb|file_name.m|$>$'' to see the header documentation of my program scripts.\\
+............................................................................................................................................
+
+
+\end{document}

@@ -1,0 +1,7 @@
+Discriminant Analysis: >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+Maximum avearge accuracy (in Percentage)    : 71.94
+LP detection accuracy (in Percentage)       : 58.33
+Non-LP detection accuracy (in Percentage)   : 85.55
+Value of Gamma at Max. accuracy : 0.08
+Overall testing time : 7.452635 seconds

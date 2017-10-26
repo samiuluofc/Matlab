@@ -1,0 +1,7 @@
+K nearest neighbor: >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+Maximum avearge accuracy (in Percentage)    : 78.89
+LP detection accuracy (in Percentage)       : 81.30
+Non-LP detection accuracy (in Percentage)   : 76.48
+Value of Neighbor at Max. accuracy : 15.00
+Overall testing time : 99.278747 seconds

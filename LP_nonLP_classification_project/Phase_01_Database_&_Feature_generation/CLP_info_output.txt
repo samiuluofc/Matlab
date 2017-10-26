@@ -1,0 +1,11 @@
+LP: (Total 540)>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+Percentage of LP area over the full images: 2.87
+Average height (in pixels) of LPs : 55
+Average width (in pixels) of LPs  : 163
+
+Non-LP: (Total 1820)>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+Percentage of Non-LP area over the full images: 6.06
+Average height (in pixels) of Non-LPs : 58
+Average width (in pixels) of Non-LPs  : 84

@@ -1,0 +1,84 @@
+\documentclass[a4paper,12pt]{article} %make sure that we are using 12 pt font
+\usepackage{fancyhdr}
+\usepackage[margin=2.5cm]{geometry}%rounded up from 1.87, just to be safe...
+\usepackage{parskip}
+%%\usepackage{times} %make sure that the times new roman is used
+\usepackage{sectsty}
+%%\raggedright
+
+
+
+\begin{document}
+
+
+\pagestyle{fancy}
+%This puts your name at the top right, outside the margin
+\lhead{CPSC 607: Biological Computation (Winter 2016)\\Project Documentation}
+\rhead{Samiul Azam\\30 Apr. 2016}
+ \renewcommand{\headrulewidth}{1pt}
+\sectionfont{\fontsize{12}{15}\selectfont}
+\vspace{2cm}
+
+
+\section*{\\Phase 06: Last Experiment}
+............................................................................................................................................
+
+In the command window of Matlab, type ``help $<$\verb|file_name.m|$>$'' to see the header documentation of my program scripts.\\
+............................................................................................................................................
+
+\textbf{Note 1:}\\\\
+This folder contains following main script. Go to Matlab Command Window and type the target main script (For example $>>$  \verb|train_models|) for execution.
+\begin{itemize}
+	\item \verb|train_models.m|   
+		\begin{itemize}
+		\item Read the main script header for more details.
+		\item This program will generate four trained classifiers (based on original size (1x) CLPs) for mixture of expert-models. The model files are as follows
+		
+			\begin{itemize}
+				\item \verb|knn.mat|
+				\item \verb|svm.mat|
+				\item \verb|tree.mat|
+				\item \verb|disa.mat|
+				
+			\end{itemize}
+	\end{itemize}
+		
+	\item \verb|test_mixture.m|
+		\begin{itemize}
+		\item Read the main script header for more details.   	
+		\item It generates a ``txt'' file named \verb|output.txt| (in the current directory) that contains the outputs (accuracies of the final mixture of expert-models for different sizes of CLPs).	
+			
+		\end{itemize}
+		
+\end{itemize}
+
+............................................................................................................................................
+\textbf{Note 2: }\\\\
+This folder contains following function scripts (You don't need to run them separately).
+\begin{itemize}
+	
+	\item \verb|mixture_fitness.m|
+	\begin{itemize}
+		\item Read the function header for more details.
+		\item This function will give the accuracy (\%) of the mixture-model based on the provided weight vector (w) and selected resolution of the CLPs (S) as parameter. 
+		\item This function is used inside \verb|test_mixture.m|. 
+
+	\end{itemize}
+
+	\item \verb|my_svmclassify.m|
+	\begin{itemize}
+		\item Not my major contribution. I slightly modify the built-in matlab function to generate probability instead of `0' or `1' labels. 
+		\item This function is used inside \verb|mixture_fitness.m|.
+	\end{itemize}
+	\item \verb|my_svmdecision.m|
+	\begin{itemize}
+		\item Not my major contribution. I slightly modify the built-in matlab function to generate probability instead of `0' or `1' labels. 
+		\item This function is used inside \verb|my_svmclassify.m|.
+	\end{itemize}
+	
+\end{itemize}
+............................................................................................................................................\\
+In the command window of Matlab, type ``help $<$\verb|file_name.m|$>$'' to see the header documentation of my program scripts.\\
+............................................................................................................................................
+
+\end{document}

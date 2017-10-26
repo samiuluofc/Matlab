@@ -1,0 +1,14 @@
+-------------------------------- Weight vector (Dtree, KNN, DISA, SVM)
+
+weight combination (1, 1, 0, 0):   72.96 %
+weight combination (0, 1, 1, 0):   75.55 %
+weight combination (0, 0, 1, 1):   72.00 %
+weight combination (1, 0, 0, 1):   69.60 %
+weight combination (0, 1, 0, 1):   76.44 %
+weight combination (1, 0, 1, 0):   71.06 %
+weight combination (1, 0, 1, 1):   72.51 %
+weight combination (0, 1, 1, 1):   75.39 %
+weight combination (1, 1, 0, 1):   74.55 %
+weight combination (1, 1, 1, 0):   75.16 %
+weight combination (1, 1, 1, 1):   75.10 %
+weight combination (1, 4, 2, 3):   76.21 %

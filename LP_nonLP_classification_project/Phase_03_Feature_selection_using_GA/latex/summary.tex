@@ -1,0 +1,88 @@
+\documentclass[a4paper,12pt]{article} %make sure that we are using 12 pt font
+\usepackage{fancyhdr}
+\usepackage[margin=2.5cm]{geometry}%rounded up from 1.87, just to be safe...
+\usepackage{parskip}
+%%\usepackage{times} %make sure that the times new roman is used
+\usepackage{sectsty}
+%%\raggedright
+
+
+
+\begin{document}
+
+
+\pagestyle{fancy}
+%This puts your name at the top right, outside the margin
+\lhead{CPSC 607: Biological Computation (Winter 2016)\\Project Documentation}
+\rhead{Samiul Azam\\30 Apr. 2016}
+ \renewcommand{\headrulewidth}{1pt}
+\sectionfont{\fontsize{12}{15}\selectfont}
+\vspace{2cm}
+
+
+\section*{\\Phase 03: Feature Selection using Genetic Algorithm (GA)}
+............................................................................................................................................
+
+In the command window of Matlab, type ``help $<$\verb|file_name.m|$>$'' to see the header documentation of my program scripts.\\
+............................................................................................................................................
+
+\textbf{Note 1:}\\\\
+This folder contains following main script. Go to Matlab Command Window and type the target main script (For example $>>$  \verb|selection_GA|) for execution.
+\begin{itemize}
+	\item \verb|selection_GA.m|   
+		\begin{itemize}
+		\item Read the main script header for more details.
+		\item This program will apply binary chromosome based Genetic Algorithm (GA) for selecting features of each classifier.
+		\item It generates a ``txt'' file named \verb|Output.txt| (in the current directory) that contains the information about the best individual for each classifier. It also generates following four ``bmp'' files containing generation graphs.
+			\begin{itemize}
+				\item \verb|disa_GA.bmp|
+				\item \verb|knn_GA.bmp|
+				\item \verb|tree_GA.bmp|
+				\item \verb|svm_GA.bmp|
+			\end{itemize}	
+	
+		\item Moreover, the four chromosomes of the fittest individuals (from four classifiers) are saved in the \verb|chromosome.mat| file.
+		\end{itemize}
+\end{itemize}
+
+............................................................................................................................................\\\\
+\textbf{Note 2: }\\
+This folder contains following function scripts (You don't need to run them separately).
+\begin{itemize}
+		\item \verb|tree_fitness.m|
+		\begin{itemize}
+			\item Read the function header for more details. Its a fitness function for GA.
+			\item This function is used inside \verb|selection_GA.m|.
+		\end{itemize}
+		\item \verb|disa_fitness.m|
+		\begin{itemize}
+			\item Read the function header for more details. Its a fitness function for GA.
+			\item This function is used inside \verb|selection_GA.m|.
+		\end{itemize}
+		\item \verb|knn_fitness.m|
+		\begin{itemize}
+			\item Read the function header for more details. Its a fitness function for GA.
+			\item This function is used inside \verb|selection_GA.m|.
+		\end{itemize}
+		\item \verb|svm_fitness.m|
+		\begin{itemize}
+			\item Read the function header for more details. Its a fitness function for GA.
+			\item This function is used inside \verb|selection_GA.m|.
+		\end{itemize}
+		
+		\item \verb|my_svmclassify.m|
+		\begin{itemize}
+			\item Not my major contribution. I slightly modify the built-in Matlab function to generate probability instead of `0' or `1' labels. 
+			\item This function is used inside \verb|svm_fitness.m|.
+		\end{itemize}
+		\item \verb|my_svmdecision.m|
+		\begin{itemize}
+			\item Not my major contribution. I slightly modify the built-in Matlab function to generate probability instead of `0' or `1' labels. 
+			\item This function is used inside \verb|my_svmclassify.m|.
+		\end{itemize}
+\end{itemize}
+
+............................................................................................................................................\\
+In the command window of Matlab, type ``help $<$\verb|file_name.m|$>$'' to see the header documentation of my program script.\\
+............................................................................................................................................
+\end{document}

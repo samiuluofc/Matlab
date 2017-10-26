@@ -1,0 +1,77 @@
+\documentclass[a4paper,12pt]{article} %make sure that we are using 12 pt font
+\usepackage{fancyhdr}
+\usepackage[margin=2.5cm]{geometry}%rounded up from 1.87, just to be safe...
+\usepackage{parskip}
+%%\usepackage{times} %make sure that the times new roman is used
+\usepackage{sectsty}
+%%\raggedright
+
+
+
+\begin{document}
+
+
+\pagestyle{fancy}
+%This puts your name at the top right, outside the margin
+\lhead{CPSC 607: Biological Computation (Winter 2016)\\Project Documentation}
+\rhead{Samiul Azam\\30 Apr. 2016}
+ \renewcommand{\headrulewidth}{1pt}
+\sectionfont{\fontsize{12}{15}\selectfont}
+\vspace{2cm}
+
+
+\section*{\\Project Name: License Plate and Non-LP Image Classification}
+............................................................................................................................................
+
+Note 1:
+\begin{itemize}
+	\item The project is implemented in the Matlab 2012a (full version). The project codes are tested and executed on a workstation having Windows operating system.
+	
+	\item First, run Matlab 2012a (or upper versions). It should have the image processing, global optimization and statistical-and-machine learning toolboxes. Choose ``Project\_Code" as your current folder in the Matlab. Now navigate through subfolders (total 6 folders for 6 phases) to run specific phase of the project. Each of the project-phase folder contains its own README.pdf file. Go through those README.pdf files for more specific instructions. 
+	
+	\item It's better to run the experiments sequentially (from phase 01 to phase 06) for better understanding. But its not necessary, because each folder contains pre-generated Matlab data files. So you can test any phase at any time.
+	
+	\item If you find difficulties to run the project, you can contact me at \\email: \verb|samiul.azam@ucalgary.ca|.
+	
+  	
+\end{itemize}
+
+............................................................................................................................................
+
+\textbf{Note 2:}\\\\
+Brief description of the project phases:
+\begin{itemize}
+	\item \textbf{Phase 01:}
+		\begin{itemize}
+			\item In this phase, I extract HOG features from all Candidate License Plate (CLP) images. Moreover I consider three different resolutions: original size (1x), half (hx) and double (2x) of the original size CLPs. In the next phases, I use only the extracted features during experiment.	  
+		\end{itemize}
+	
+	\item \textbf{Phase 02:}
+		\begin{itemize}
+			\item In this phase, I tune all four classifiers (based on one of their sensitive parameter) to maximize their performance. In these experiment, I consider all 360 features of HOG. This part is important before applying genetic algorithm (GA) for feature selection.  
+		\end{itemize}
+	
+	\item \textbf{Phase 03:}
+		\begin{itemize}
+			\item In this phase, I use binary chromosome based GA for feature selection (applied on all four classifiers separately). The selected features (or HOG bins) are used in the next phases.    
+		\end{itemize}
+	
+	\item \textbf{Phase 04:}
+		\begin{itemize}
+			\item In this phase, I generate trained models for all four classifiers (using selected features). These models are used in the mixture of experts model of phase 05.    
+		\end{itemize}
+	\newpage
+	\item \textbf{Phase 05:}
+		\begin{itemize}
+			\item In this phase, I have conducted experiment to adjust the four weights of the mixture model. Initially, I assign weights based on participation and performance ranking. Then I apply both GA and Particle Swarm Optimization (PSO) separately to find the best weight vector. PSO performs well in this search process.    
+		\end{itemize}
+	\item \textbf{Phase 06:}
+		\begin{itemize}
+			\item In this final phase, I use the searched weight vector (provided by the PSO in the previous phase) inside the mixture of experts model, and test it with 1x, 2x and hx sizes of CLPs.  					
+		\end{itemize}
+		 
+\end{itemize}
+
+..........................................................THANK YOU............................................................
+
+\end{document}

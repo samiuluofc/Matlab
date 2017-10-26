@@ -1,0 +1,22 @@
+Mixture of experts model: >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+PSO Call : (1) -----------------------------------------------------------------------
+Classification Accuracy in Percentage      : 79.12 %
+The optimal weights (DTree, KNN, DISA, SVM): (1.0011, 4.0022, -0.0400, -0.9278)
+
+PSO Call : (2) -----------------------------------------------------------------------
+Classification Accuracy in Percentage      : 78.89 %
+The optimal weights (DTree, KNN, DISA, SVM): (-0.5185, -3.1148, 0.4016, -0.2040)
+
+PSO Call : (3) -----------------------------------------------------------------------
+Classification Accuracy in Percentage      : 79.23 %
+The optimal weights (DTree, KNN, DISA, SVM): (0.5788, 2.0888, 0.0759, -0.3240)
+
+PSO Call : (4) -----------------------------------------------------------------------
+Classification Accuracy in Percentage      : 78.91 %
+The optimal weights (DTree, KNN, DISA, SVM): (0.7628, 3.3987, -0.2071, -0.3895)
+
+PSO Call : (5) -----------------------------------------------------------------------
+Classification Accuracy in Percentage      : 78.92 %
+The optimal weights (DTree, KNN, DISA, SVM): (0.6061, 3.7346, -0.4914, 0.2931)
+
